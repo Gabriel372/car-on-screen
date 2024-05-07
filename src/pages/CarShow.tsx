@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css'; // Importar estilos básicos do Swiper (essencial)
 import 'swiper/css/navigation'; // Importar estilos de navegação (opcional)
 import 'swiper/css/pagination';
+import { Inder } from "next/font/google";
 
 function CarShow() {
     const {CarSelected } = useContext(MyContext) as  TstateCarSelected
@@ -22,8 +23,8 @@ return (<section className={ ``}>
       pagination={{ clickable: true }} // Habilitar pontos de paginação (opcional)
       
     >
-{ImgList.map((item)=>(
-      <SwiperSlide >
+{ImgList.map((item,index)=>(
+      <SwiperSlide key={index}>
       <Image alt="" height={900} width={900} className={``}  src={ImgSelected ? ImgSelected : item}/>
       </SwiperSlide>
 ))}
@@ -31,8 +32,8 @@ return (<section className={ ``}>
     </Swiper>
 
 <div className={` flex flex-row justify-center mt-6`}>
-{ImgList.map((item)=>(
-    <Image alt="" height={900} width={900} 
+{ImgList.map((item,index)=>(
+    <Image alt="" height={900} width={900} key={index}
     className={` max-w-[150px] mr-2 rounded-md border-gray-200 border cursor-pointer hover:border-gray-800`}  src={item}
     onClick={()=> setImgSelected(item)}/>
 

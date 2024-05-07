@@ -25,7 +25,7 @@ const [ListSelected,setListSelected] = useState<TListCar>(AllList[0])
 
 {/* <div className={` flex justify-around flex-wrap`}> */}
 {AllList.map((item,index)=>(
- <button onClick={()=> setListSelected(AllList[index] )}
+ <button key={index} onClick={()=> setListSelected(AllList[index] )}
  className={`transition-all duration-300 transform hover:scale-110`}>
 
 <div className={` flex max-h-[5rem] h-full items-center mb-2`}>
