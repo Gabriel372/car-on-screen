@@ -10,11 +10,11 @@ import { Inder } from "next/font/google";
 
 function CarShow() {
     const {CarSelected } = useContext(MyContext) as  TstateCarSelected
-    const ImgList = [CarSelected.imgFront,CarSelected.imgBack,CarSelected.imgPanel]
+    const ImgList = [CarSelected?.imgFront,CarSelected?.imgBack,CarSelected?.imgPanel]
     const [ImgSelected,setImgSelected] = useState<string>('')
 
 return (<section className={ ``}>
-
+{CarSelected && <>
         <Swiper className={` max-w-[37.5rem] w-full `}
       slidesPerView={1} // Número de slides visíveis por vez
       spaceBetween={10} // Espaçamento entre slides (opcional)
@@ -51,7 +51,7 @@ return (<section className={ ``}>
 
 
 {CarSelected.name}
-
+</>}
 
 </section>)
 
