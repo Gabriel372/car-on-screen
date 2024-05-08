@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
+  // output: "export",
   reactStrictMode: true,
   images: {
     domains: ['blog.olhonocarro.com.br',
@@ -33,6 +33,9 @@ const nextConfig = {
 'www.honda.com.br',
 'www.automaistv.com.br',
 'i.pinimg.com',
+'cdn.motor1.com',
+'titano.fiat.com.br',
+'www.cnnbrasil.com.br',
  ],
   },
 

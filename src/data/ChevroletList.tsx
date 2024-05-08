@@ -24,6 +24,16 @@ imgBack:'https://www.chevrolet.com.br/content/dam/chevrolet/mercosur/brazil/port
 imgPanel:'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhXmjsw40_ZoIbbAfN5JEwUSD3M6KzThjrU1-ldNgO8L3YR4uieXU2A0BK3YgTpsRX5SqlCpgqcIfZArqDtjLNpcicE6Il1rfiONiAiO4JdVGYtVDhuB90rFeyCGUeIWLrGlHVGT1-tUbpilToWfKjspqBrcip_Ge_FuB4i6NG5v42FxFB0_9MdtarYqg/s1200/Onix-LTZ-2023%20%282%29.jpg',
 hasAirConditioned:false,
 },  
+ {
+ name:'Spin premier',
+ year:'2024',
+ consum:'',
+ power:'',
+ imgFront:'https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2024/01/Chevrolet-Spin-Premir-2024.jpg?w=1084',
+ imgBack:'https://cdn.motor1.com/images/mgl/W8MQeN/s4/teste-chevrolet-spin-premier-2025.webp',
+ imgPanel:'https://cdn.motor1.com/images/mgl/MkOmnY/s4/teste-chevrolet-spin-premier-2025.webp',
+  hasAirConditioned:false,
+},
 {
 name:'Montana RS',
 year:'2024',
@@ -44,6 +54,16 @@ imgBack:'https://www.chevrolet.com.br/content/dam/chevrolet/mercosur/brazil/port
 imgPanel:'https://s2-autoesporte.glbimg.com/wJbzszVQJggspgnKoSIDfGCW97g=/0x0:1400x788/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_cf9d035bf26b4646b105bd958f32089d/internal_photos/bs/2021/q/P/toh0fxT8S13BTqFLm0SA/chevrolet-tracker-premier-011.jpg',
  hasAirConditioned:false,
  },      
+ {
+ name:'S10 HC',
+ year:'2024',
+ consum:'',
+ power:'',
+ imgFront:'https://www.chevrolet.com.br/content/dam/chevrolet/mercosur/brazil/portuguese/index/pickups-and-trucks/s10-prevenda-cerrada/colorizer/hc/hc-cinza-moss.png?imwidth=1200',
+ imgBack:'https://quatrorodas.abril.com.br/wp-content/uploads/2024/04/Nova-S10_2-1.jpg?crop=1&resize=1212,909',
+ imgPanel:'https://quatrorodas.abril.com.br/wp-content/uploads/2024/04/Nova-S10_3-1.jpg?crop=1&resize=1212,909',
+  hasAirConditioned:false,
+}
 
 ]}
 

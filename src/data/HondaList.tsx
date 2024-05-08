@@ -25,6 +25,17 @@ hasAirConditioned:false,
     hasAirConditioned:false,
 },
 {
+ name:'Accord',
+year:'2024',
+consum:'',
+ power:'',
+imgFront:'https://www.honda.com.br/automoveis/sites/hab/files/2023-10/Accord_Frente_Prata_Lunar.png',
+imgBack:'https://www.honda.com.br/automoveis/sites/hab/files/2023-10/_0000s_0011_28_Arquivo_027_150.png',
+imgPanel:'https://www.honda.com.br/automoveis/sites/hab/files/2023-10/personalizacao-cookpit-2.png',
+hasAirConditioned:false,
+}
+,
+{
     name:'Cr-v',
      year:'2024',
     consum:'',
@@ -45,14 +56,15 @@ hasAirConditioned:false,
     hasAirConditioned:false,
 },
 {
-    name:'Accord',
-     year:'2024',
-    consum:'',
-    power:'',
-    imgFront:'https://www.honda.com.br/automoveis/sites/hab/files/2023-10/Accord_Frente_Prata_Lunar.png',
-    imgBack:'https://www.honda.com.br/automoveis/sites/hab/files/2023-10/_0000s_0011_28_Arquivo_027_150.png',
-    imgPanel:'https://www.honda.com.br/automoveis/sites/hab/files/2023-10/personalizacao-cookpit-2.png',
-    hasAirConditioned:false,
-},
+ name:'ZR-V',
+year:'2024',
+consum:'',
+ power:'',
+imgFront:'https://www.honda.com.br/automoveis/sites/hab/files/2023-10/Azul%20-%2001_0.png',
+imgBack:'https://www.honda.com.br/automoveis/sites/hab/files/2023-10/12.png',
+imgPanel:'https://www.honda.com.br/automoveis/sites/hab/files/2023-10/01_0.png',
+hasAirConditioned:false,
+}
+
 ]
 }

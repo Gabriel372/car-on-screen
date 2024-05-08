@@ -5,6 +5,17 @@ name:'Fiat',
 logo:'https://cdn.iconscout.com/icon/free/png-256/free-fiat-1-202773.png',
 list:[
 {
+name:'Mobi like',
+year:'2024',
+consum:'',
+power:'1.0',
+imgFront:'https://production.autoforce.com/uploads/picture/image/247756009/main_webp_comprar-mobi-2025_35b7e45dde.jpg.webp',
+imgBack:'https://production.autoforce.com/uploads/picture/image/247755854/main_webp_comprar-mobi-2024-4b108dc4-f41e-40b3-9ff9-6632c154ad5f_ae3e316df3.jpg.webp',
+imgPanel:'https://production.autoforce.com/uploads/picture/image/247755970/main_webp_comprar-mobi-2025_2e8252c589.jpg.webp',
+ hasAirConditioned:false,
+}
+,    
+{
     name:'Argo trekking',
     year:'2025',
     consum:'',
@@ -44,5 +55,21 @@ imgBack:'https://production.autoforce.com/uploads/picture/image/185546458/main_w
 imgPanel:'https://brilhautofiat.com.br/ofertas/turbo-200-flex-at',
  hasAirConditioned:false,
 }
+,
+{
+name:'Titano ranch',
+year:'2024',
+consum:'',
+power:'',
+imgFront:'https://titano.fiat.com.br/images/Versions/ranch/principal/120.webp',
+imgBack:'https://titano.fiat.com.br/images/Gallery/titano-cacamba@3x.webp',
+imgPanel:'https://titano.fiat.com.br/images/Gallery/titano-painel-interno@3x.webp',
+ hasAirConditioned:false,
+}
+,
+
+
+
+
  ]
 }
