@@ -6,12 +6,17 @@ export type  Props = {
 export type Tcar = {
     name:string
     year:string
-consum:string
+    price:string
 power:string
+fuel:string
+doors:string
+transmission:string
+steering:string
+hasEletricWindow:string
+hasAirConditioned:string
 imgFront:string
 imgBack:string
 imgPanel:string
-hasAirConditioned:boolean,
 }
 // export type TallList = Tcar[][]
 export type TListCar = {

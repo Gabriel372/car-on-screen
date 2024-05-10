@@ -5,70 +5,59 @@ import Image from "next/image";
 import Link from "next/link";
 
 function SelectList() {
-const {AllList,setCarSelected } = useContext(MyContext) as TallList & TstateCarSelected
-const [ListSelected,setListSelected] = useState<TListCar>(AllList[0])
+    const { AllList, setCarSelected } = useContext(MyContext) as TallList & TstateCarSelected
+    const [ListSelected, setListSelected] = useState<TListCar>(AllList[0])
 
-//AO CLICAR EM UM DOS CARROS..
+    return (<section className={` overflow-hidden`}>
+        <div className={` max-w-6xl m-auto`}>
+            <h3 className={` text-center font-semibold text-2xl my-3`}>Selecione a marca para visualizar os carros</h3>
+            <div className=" flex justify-around flex-wrap">
+                {AllList.map((item, index) => (
+                    <button key={index} onClick={() => setListSelected(AllList[index])}
+                        className={`transition-all duration-300 transform hover:scale-110`}>
 
-//CLICK NO CARRO DEFINE QUE SERA EXIBITDO
+                        <div className={` flex max-h-[5rem] h-full items-center mb-2`}>
+                            <Image alt="" height={500} width={500} className={` max-w-[5rem] `} src={item.logo} />
+                        </div>
+                        <b className={` text-xl `}>{item.name}</b>
+                    </button>
+                ))
+                }
+            </div>
 
-//CRIA STATE IN CONTEXT: CARSELECTED
+            <ul className={` flex flex-wrap gap-2 justify-center mt-4`}>
+                {ListSelected.list.map((item: Tcar, index: number) => (
+                    <li key={index} className={` max-w-64 border border-gray-200 rounded-md overflow-hidden bg-white cursor-pointer`}>
+                        <Link href={`/CarShow`} onClick={() => setCarSelected(item)}
+                            className={` flex flex-col h-full`}>
+                            <div className={` overflow-hidden max-h-[8rem] flex items-center`}>
+                                <div>
+                                    <Image height={500} width={500} src={item.imgFront} alt="img"
+                                        className={`transition-all duration-300 transform hover:scale-110`} />
+                                </div>
+                            </div>
 
-//NAVEGA PARA CAR SHOW E EXIBE TUDO SOBRE
+                            <div className={` mx-2 mb-2`}>
+                                <p className={` flex flex-col text-sm text-gray-600`}>Modelo
+                                    <b className={` text-xl text-red-900`}>{item.name} </b> </p>
+                                <p className={` text-sm text-gray-600`}>Ano:
+                                    <b className={`text-black`}> {item.year} </b> </p>
+                                <p className={` text-sm text-gray-600`}>Preço da tabela fipe:
+                                    <b className={`text-black`}> 10 000,00<span className={` font-light`}> R$</span>
+                                    </b>
+                                </p>
+                            </div>
 
-//CAR SHOW TERA CARROCEL
+                        </Link>
 
- return (<section className={` overflow-hidden`}>
-<h3 className={` text-center font-semibold text-2xl my-3`}>Selecione a marca para visualizar os carros</h3>
+                    </li>
+                ))
+                }
+            </ul>
 
-<div className=" flex justify-around flex-wrap">
+        </div>
 
-{/* <div className={` flex justify-around flex-wrap`}> */}
-{AllList.map((item,index)=>(
- <button key={index} onClick={()=> setListSelected(AllList[index] )}
- className={`transition-all duration-300 transform hover:scale-110`}>
-
-<div className={` flex max-h-[5rem] h-full items-center mb-2`}>
- <Image alt="" height={500} width={500} className={` max-w-24 `}  src={item.logo}/>
-</div>
-
- <b className={` text-xl `}>{item.name}</b>
-
- </button>
-))
-}
-</div>
-{/* <div className={``}>
-<Image alt="" height={500} width={500} className={` max-w-32`}  src={`https://i.pinimg.com/originals/89/12/26/891226b572e9e2f1f69d3ff380579838.png` }/>
-</div> */}
-
-{/* <button onClick={()=> console.log(ListSelected)}>CLICk2</button> */}
-{/* </div> */}
-
-<ul className={` flex flex-wrap gap-2 justify-center mt-4`}>
-{ListSelected.list.map((item:Tcar,index:number)=>(
-
-<li key={index} className={` max-w-64 border border-gray-200 rounded-md overflow-hidden bg-white cursor-pointer`}>
-<Link href={`/CarShow`} onClick={()=> setCarSelected(item)}>
-<div className={` overflow-hidden`}>
-<Image height={500} width={500} src={item.imgFront} alt="img"
-className={`transition-all duration-300 transform hover:scale-110`}/>
-</div>
-
-<b className={` text-xl`}>{item.name} </b>
-<p>Ano: {item.year} </p>
-<p>Consumo: {item.consum} </p>
-</Link>
-
-
-
-
-</li>
-))
-}
-</ul>
-
- </section>)   
+    </section>)
 }
 
-export default SelectList ;
+export default SelectList;

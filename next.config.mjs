@@ -36,6 +36,7 @@ const nextConfig = {
 'cdn.motor1.com',
 'titano.fiat.com.br',
 'www.cnnbrasil.com.br',
+'www.elcarrocolombiano.com',
  ],
   },
 
