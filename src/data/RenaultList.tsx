@@ -8,7 +8,7 @@ list: [
 {
  name:'Kwid ZEN',
  year:'2024',
- price:'69990,00',
+ price:'699.90,00',
  power:'1.0',
  fuel:'Flex',
  doors:'4',

@@ -7,7 +7,7 @@ list:[
 {
 name:'Mobi like',
 year:'2024',
-price:'72900,00',
+price:'729.00,00',
 power:'1.0',
 fuel:'Flex',
 doors:'4',
@@ -23,7 +23,7 @@ imgPanel:'https://production.autoforce.com/uploads/picture/image/247755970/main_
 {
     name:'Argo trekking',
     year:'2024',
-    price:'88612,00',
+    price:'886.12,00',
     power:'1.3',
     fuel:'Flex',
     doors:'4',
@@ -38,7 +38,7 @@ imgPanel:'https://production.autoforce.com/uploads/picture/image/247755970/main_
 {
 name:'Cronos drive',
  year:'2024',
- price:'76400,00',
+ price:'764.00,00',
  power:'1.3',
  fuel:'Flex',
  doors:'4',

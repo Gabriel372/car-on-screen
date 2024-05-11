@@ -38,12 +38,12 @@ function SelectList() {
                             </div>
 
                             <div className={` mx-2 mb-2`}>
-                                <p className={` flex flex-col text-sm text-gray-600`}>Modelo
+                                <p className={` flex flex-col text-sm text-gray-600`}>
                                     <b className={` text-xl text-red-900`}>{item.name} </b> </p>
                                 <p className={` text-sm text-gray-600`}>Ano:
-                                    <b className={`text-black`}> {item.year} </b> </p>
-                                <p className={` text-sm text-gray-600`}>Preço da tabela fipe:
-                                    <b className={`text-black`}> 10 000,00<span className={` font-light`}> R$</span>
+                                    <b className={`text-black text-[1.1rem]`}> {item.year} </b> </p>
+                                <p className={` text-sm text-gray-600`}>Preço da tabela fipe R$:
+                                    <b className={`text-black`}> {item.price}<span className={` font-light`}> </span>
                                     </b>
                                 </p>
                             </div>

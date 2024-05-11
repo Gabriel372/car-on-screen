@@ -7,7 +7,7 @@ list:[
 {
 name:'Onix Premier AT ',
 year:'2025',
-price:'119790,00',
+price:'119.790,00',
 power:'1.0 Turbo',
 fuel:'Flex',
 doors:'4',
@@ -22,7 +22,7 @@ imgPanel:'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhXmjsw40_Zo
 {
 name:'Onix Plus Premier AT',
 year:'2025',
-price:'125790,00',
+price:'125.790,00',
 power:'1.0 Turbo',
 fuel:'Flex',
 doors:'4',
@@ -37,7 +37,7 @@ imgPanel:'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhXmjsw40_Zo
  {
  name:'Spin Premier',
  year:'2025',
- price:'104000,00',
+ price:'104.000,00',
  power:'1.8',
  fuel:'Flex',
 doors:'4',
@@ -52,7 +52,7 @@ hasAirConditioned:'Sim',
 {
 name:'Montana RS',
 year:'2025',
-price:'158550,00',
+price:'158.550,00',
 power:'1.2 Turbo',
 fuel:'Flex',
 doors:'4',
@@ -67,7 +67,7 @@ imgPanel:'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhsJk-bLy5r1
 {
 name:'Tracker AT Turbo',
 year:'2025',
-price:'119900,00',
+price:'119.900,00',
 power:'1.0 Turbo',
 fuel:'Flex',
 doors:'4',
@@ -82,7 +82,7 @@ imgPanel:'https://s2-autoesporte.glbimg.com/wJbzszVQJggspgnKoSIDfGCW97g=/0x0:140
  {
  name:'S10 HC',
  year:'2025',
- price:'302900,00',
+ price:'302.900,00',
  power:'2.8 Turbosiesel',
  fuel:'Disel',
 doors:'4',

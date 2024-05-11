@@ -7,7 +7,7 @@ list:[
 {
 name:'Polo track',
 year:'2025',
-price:'78417,00',
+price:'784.17,00',
 power:'1.0',
 fuel:'Flex',
 doors:'4',
@@ -22,7 +22,7 @@ imgPanel:'https://assets.volkswagen.com/is/image/volkswagenag/novo-polo-painel-c
 {
  name:'Virtus confortline',
 year:'2025',
-price:'114090,00',
+price:'114.090,00',
  power:'1.0',
  fuel:'Flex',
 doors:'4',
@@ -37,7 +37,7 @@ imgPanel:'https://assets.volkswagen.com/is/image/volkswagenag/INTERIOR-VIRTUS-EX
 {
 name:'Saveiro',
 year:'2025',
-price:'85000,00.',
+price:'85.000,00.',
 power:'1.6',
 fuel:'flex',
 doors:'2',
@@ -52,7 +52,7 @@ imgPanel:'https://cdn.motor1.com/images/mgl/YAGq7y/s1/avaliacao-volkswagen-savei
 {
 name:'Nivus Highline 200 tsi',
 year:'2024',
-price:'145990,00',
+price:'145.990,00',
 power:'1.0 turbo',
 fuel:'Flex',
 doors:'4',
@@ -67,7 +67,7 @@ imgPanel:'https://www.webmotors.com.br/wp-content/uploads/2023/07/27144337/VW-Ni
 {
 name:'T-cross Confortline 200 TSI',
  year:'2024',
- price:'111490,00',
+ price:'111.490,00',
 power:'1.0 turbo',
 fuel:'Flex',
 doors:'4',
@@ -82,7 +82,7 @@ imgPanel:'https://production.autoforce.com/uploads/picture/image/189297237/main_
 {
 name:'Amarok v6 confortline',
  year:'2024',
- price:'298430,00',
+ price:'298.430,00',
 power:'3.0',
 fuel:'Diesel',
 doors:'4',
