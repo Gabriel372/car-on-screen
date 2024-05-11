@@ -37,6 +37,7 @@ const nextConfig = {
 'titano.fiat.com.br',
 'www.cnnbrasil.com.br',
 'www.elcarrocolombiano.com',
+'fotos-jornaldocarro-estadao.nyc3.cdn.digitaloceanspaces.com',
  ],
   },
 
