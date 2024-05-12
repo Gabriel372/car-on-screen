@@ -47,7 +47,7 @@ return (<section className={ ``}>
 <div className={` flex flex-row justify-center mt-6`}>
 {ImgList.map((item,index)=>(
     <Image alt="" height={900} width={900} key={index}
-    className={` max-w-[150px] mr-2 rounded-md border-gray-200 border cursor-pointer hover:border-gray-800`}  src={item}
+    className={` max-w-[9.3rem] mr-2 rounded-md border-gray-200 border cursor-pointer hover:border-gray-800 w-screen450:max-w-[6rem] w-screen350:max-w-[4.5rem]`}  src={item}
     onClick={()=> setImgSelected(item)}/>
 
 ))}
@@ -63,41 +63,42 @@ return (<section className={ ``}>
 <h3 className={` text-[1.5rem] my-3`}>Características</h3>
 
 <ul>
-<li className={` text-md text-gray-600 flex items-center`}>
+<li className={` text-md text-gray-600 flex items-center mb-3`}>
 <RxCalendar className={` mr-1 text-2xl`}/>Ano: <p className={` text-xl ml-1 font-semibold text-black`}> {CarSelected.year} </p>
 </li>
 
-<li className={` text-md text-gray-600 flex items-center`}>
+<li className={` text-md text-gray-600 flex items-center mb-3`}>
 <TfiMoney className={` mr-1 text-2xl`}/>Preço da tabela fipe: <p className={` text-xl ml-1 font-semibold text-black`}> {CarSelected.price} </p>
 </li>
 
-<li className={` text-md text-gray-600 flex items-center`}><PiEngineBold className={` mr-1 text-2xl`}/>Motor: 
+<li className={` text-md text-gray-600 flex items-center mb-3`}><PiEngineBold className={` mr-1 text-2xl`}/>Motor: 
 <p className={` text-xl ml-1 font-semibold text-black`}> {CarSelected.power} </p>
 </li>
 
-<li className={` text-md text-gray-600 flex items-center`}><BsFuelPump className={` mr-1 text-2xl `}/>Combustivel: 
+<li className={` text-md text-gray-600 flex items-center mb-3`}><BsFuelPump className={` mr-1 text-2xl `}/>Combustivel: 
 <p className={` text-xl ml-1 font-semibold text-black`}> {CarSelected.fuel} </p>
 </li>
 
-<li className={` text-md text-gray-600 flex items-center`}><GiCarDoor  className={` mr-1 text-2xl `}/>Quantidade de portas: 
+<li className={` text-md text-gray-600 flex items-center mb-3`}><GiCarDoor  className={` mr-1 text-2xl `}/>Quantidade de portas: 
 <p className={` text-xl ml-1 font-semibold text-black`}> {CarSelected.doors} </p>
 </li>
 
-<li className={` text-md text-gray-600 flex items-center`}><TbManualGearbox  className={` mr-1 text-2xl `}/>Cãmbio: 
-<p className={` text-xl ml-1 font-semibold text-black`}> {CarSelected.transmission} </p>
+<li className={` text-md text-gray-600 flex  w-screen350:flex-col items-center w-screen350:items-start mb-3`}>
+<p className={` flex flex-row`}><TbManualGearbox  className={` mr-1 text-2xl `}/>Cãmbio:</p>    
+<p className={` text-xl ml-1 font-semibold text-black w-screen350:text-[1rem]`}> {CarSelected.transmission} </p>
 </li>
 
-<li className={` text-md text-gray-600 flex items-center`}><TbSteeringWheel className={` mr-1 text-2xl `}/>Direção: 
-<p className={` text-xl ml-1 font-semibold text-black`}> {CarSelected.steering} </p>
+<li className={` text-md text-gray-600 flex items-center mb-3`}><TbSteeringWheel className={` mr-1 text-2xl `}/>Direção: 
+<p className={` text-xl ml-1 font-semibold text-black `}> {CarSelected.steering} </p>
 </li>
 
 {CarSelected.hasEletricWindow !== '' || 'não' ?
-(<li className={` text-md text-gray-600 flex items-center`}><FaWhiskeyGlass className={` mr-1 text-2xl `}/>Possui Vidros eletricos? 
+(<li className={` text-md text-gray-600 flex items-center mb-3`}><FaWhiskeyGlass className={` mr-1 text-2xl `}/>Possui Vidros eletricos? 
 <p className={` text-xl ml-1 font-semibold text-black`}> {CarSelected.hasEletricWindow} </p>
 </li>):'' }
 
 {CarSelected.hasAirConditioned !== '' || 'não' ?
-(<li className={` text-md text-gray-600 flex items-center`}><IoSnowOutline className={` mr-1 text-2xl `}/>Possui Ar condicionado ? 
+(<li className={` text-md text-gray-600 flex items-center mb-3`}><IoSnowOutline className={` mr-1 text-2xl `}/>Possui Ar condicionado ? 
 <p className={` text-xl ml-1 font-semibold text-black`}> {CarSelected.hasAirConditioned} </p>
 </li>):'' }-
 
