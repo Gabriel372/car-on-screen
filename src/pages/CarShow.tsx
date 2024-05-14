@@ -2,7 +2,7 @@ import { TstateCarSelected } from "@/components/Types";
 import { useContext,useState } from "react";
 import { MyContext } from "@/context/MyContext";
 import Image from "next/image";
-import { Swiper, SwiperSlide } from 'swiper/react';
+// import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css'; // Importar estilos básicos do Swiper (essencial)
 import 'swiper/css/navigation'; // Importar estilos de navegação (opcional)
 import 'swiper/css/pagination';
@@ -16,6 +16,11 @@ import { TbSteeringWheel } from "react-icons/tb";
 import { FaWhiskeyGlass } from "react-icons/fa6";
 import { IoSnowOutline } from "react-icons/io5";
 import { PiEngineBold } from "react-icons/pi";
+import Carousel from "@/components/Carousel";
+import Teste from '../components/Teste'
+import Teste2 from "@/components/Teste2";
+import Carousel3 from "@/components/Carousel3";
+// import { Swiper } from 'swiper';
 
 
 
@@ -26,9 +31,10 @@ function CarShow() {
 
 return (<section className={ ``}>
 {CarSelected && <>
+<Carousel3/>
 <h3 className={` text-center text-2xl my-6 text-red-800 font-semibold`}>{CarSelected.name}</h3>
 
-        <Swiper className={` max-w-[37.5rem] w-full `}
+        {/* <Swiper className={` max-w-[37.5rem] w-full `}
       slidesPerView={1} // Número de slides visíveis por vez
       spaceBetween={10} // Espaçamento entre slides (opcional)
       loop={true} // Habilitar loop infinito (opcional)
@@ -42,16 +48,16 @@ return (<section className={ ``}>
       </SwiperSlide>
 ))}
 
-    </Swiper>
+    </Swiper> */}
 
-<div className={` flex flex-row justify-center mt-6`}>
+{/* <div className={` flex flex-row justify-center mt-6`}>
 {ImgList.map((item,index)=>(
     <Image alt="" height={900} width={900} key={index}
     className={` max-w-[9.3rem] mr-2 rounded-md border-gray-200 border cursor-pointer hover:border-gray-800 w-screen450:max-w-[6rem] w-screen350:max-w-[4.5rem]`}  src={item}
     onClick={()=> setImgSelected(item)}/>
 
 ))}
-</div>
+</div> */}
 
     {/* <Image alt="" height={900} width={900} className={` max-w-[150px]`}  src={CarSelected.imgFront}
     onClick={()=> setImgSelected(CarSelected.imgFront)}/>

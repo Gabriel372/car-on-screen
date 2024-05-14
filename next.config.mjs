@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+export const nextConfig = {
   // output: "export",
   reactStrictMode: true,
   images: {
@@ -38,7 +38,9 @@ const nextConfig = {
 'www.cnnbrasil.com.br',
 'www.elcarrocolombiano.com',
 'fotos-jornaldocarro-estadao.nyc3.cdn.digitaloceanspaces.com',
- ],
+'swiperjs.com' 
+
+],
   },
 
 };
