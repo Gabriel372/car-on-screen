@@ -1,20 +1,32 @@
-import { useContext, useState } from "react"
+import { useContext, useState,useEffect } from "react"
 import { MyContext } from "@/context/MyContext";
-import { TListCar, TallList, Tcar, TstateCarSelected, TstateListSelected } from "./Types";
+import { TListCar, TallList, Tcar, TstateCarSelected, TstateCarsFound, TstateInputValue, TstateListSelected } from "./Types";
 import Image from "next/image";
 import Link from "next/link";
 import { IoIosArrowForward } from "react-icons/io";
+import ShowFoundCar from "./ShowFoundCar";
 
 function SelectList() {
-    const { AllList, setCarSelected,CarSelected } = useContext(MyContext) as TallList & TstateCarSelected
+    const { AllList, setCarSelected,CarSelected,CarsFound,InputValue,setInputValue } = useContext(MyContext) as TallList & TstateCarSelected & TstateCarsFound & TstateInputValue
     const [ListSelected, setListSelected] = useState<TListCar>(AllList[0])
 const [NameClicked, setNameClicked] = useState<string>('Volkswagen')
 
-function ClickSelect(index:number,item:TListCar) {
+useEffect(()=>{
+if (InputValue !== '' && NameClicked !== '') {
+setNameClicked('')  
+}
+},[InputValue,NameClicked])
+
+
+
+function ClickSelect(index:number,item:TListCar)   {
     setListSelected(AllList[index]);
     setNameClicked(item.name)
+if (InputValue !== '') {
+setInputValue('')
 }
-return (<section className={` overflow-hidden px-1 pb-2 min-h-[100%]`}>
+}
+return (<section className={` overflow-hidden px-1 pb-2 min-h-[95vh]`}>
 <div className={` max-w-6xl m-auto`}>
  <h3 className={` text-center font-semibold text-2xl my-3 w-screen500:text-[1.1rem]`}>Selecione a marca para visualizar os carros</h3>
  
@@ -33,6 +45,9 @@ return (<section className={` overflow-hidden px-1 pb-2 min-h-[100%]`}>
  }
  </div>
 
+{InputValue ? 
+<ShowFoundCar/>
+: 
  <ul className={` flex flex-wrap gap-2 justify-center mt-4 box-content`}>
 {ListSelected.list.map((item: Tcar, index: number) => (
 <li key={index} className={` max-w-[23rem] border border-gray-200 rounded-md overflow-hidden bg-white cursor-pointer`}>
@@ -66,6 +81,11 @@ className={`transition-all duration-300 transform hover:scale-110`} />
 ))
  }
  </ul>
+}
+
+
+
+
 
  </div>
 

@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // output: "export",
+  //domains
+  //remotePatterns
   reactStrictMode: true,
   images: {
     domains: ['blog.olhonocarro.com.br',
@@ -38,8 +40,8 @@ const nextConfig = {
 'www.cnnbrasil.com.br',
 'www.elcarrocolombiano.com',
 'fotos-jornaldocarro-estadao.nyc3.cdn.digitaloceanspaces.com',
-'swiperjs.com' 
-
+'swiperjs.com' ,
+'carro.blog.br',
 ],
   },
 

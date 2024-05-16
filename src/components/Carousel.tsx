@@ -2,7 +2,6 @@ import React, { useRef, useState } from 'react';
 import {  Swiper,SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { Pagination } from 'swiper/modules';
 import Image from 'next/image';
 import { Tcar, TstateCarSelected } from './Types';
 import { useContext } from 'react';
@@ -10,79 +9,42 @@ import { MyContext } from '@/context/MyContext';
 import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
-import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
-;
-interface SwiperProps {
-  direction?: 'horizontal' | 'vertical';
-  loop?: boolean;
-  slidesPerView?: number;
-  spaceBetween?: number;
-  centeredSlides?: boolean;
-  autoplay?: boolean;
-  pagination?: boolean;
-  navigation?: boolean;
-  scrollbar?: boolean;
-}
+import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules';
 
 
 export default function Carousel( ) {
     const {CarSelected } = useContext(MyContext) as  TstateCarSelected  
     const ImgList = [CarSelected?.imgFront,CarSelected?.imgBack,CarSelected?.imgPanel]
     const [thumbsSwiper, setThumbsSwiper] = useState<any >({})
-
-
-
-  const pagination = {
-    clickable: true,
-    renderBullet: function ( index:number, className:any) {
-        return `<span class="${className} w-[10rem]"><Image src=${ImgList[index]} style="width: 10rem;" height={900} width={900} /></span>`;
-
-        // return `<span class="${className}"><img src="${ImgList[index]}" /></span>`;
-
-    },
-  };
-
-  return (
-    <>
+const ResponsvForCarousel = `max-w-[50rem] max-h-[24rem] w-full w-screen800:max-h-[23rem] w-screen750:max-h-[22rem] w-screen700:max-h-[21rem] w-screen650:max-h-[19rem] w-screen600:max-h-[18.5rem] w-screen550:max-h-[15rem] w-screen500:max-h-[14.5rem] w-screen450:max-h-[13rem] w-screen400:max-h-[12rem]  w-screen350:max-h-[10rem] w-screen300:max-h-[8.5rem] `
+//w-screen800:max-h-[18rem] w-screen550:max-h-[15rem] w-screen400:max-h-[12rem]
+//w-screen800:max-h-[40vh] w-screen600:max-h-[35vh] w-screen500:max-h-[30vh]
+//max-h-[24rem] w-full w-screen800:max-h-[18rem] w-screen600:max-h-[16.5rem] w-screen550:max-h-[15rem] w-screen500:max-h-[14rem] w-screen400:max-h-[12rem]
+//max-w-[50rem] max-h-[24rem] w-full w-screen800:max-h-[23rem] w-screen750:max-h-[22rem] w-screen700:max-h-[21rem] w-screen650:max-h-[19rem] w-screen600:max-h-[18.5rem] w-screen550:max-h-[15rem] w-screen500:max-h-[14.5rem] w-screen450:max-h-[13rem] w-screen400:max-h-[11rem]  w-screen350:max-h-[10rem] w-screen300:max-h-[8.5rem] 
+return (
+    <section className=''>
       <Swiper
-        style={{
-            '--swiper-navigation-color': '#fff',
-            '--swiper-pagination-color': '#fff', 
-          } as  React.CSSProperties  }
-          loop={true}
-          spaceBetween={10}
-          navigation={true}
-          thumbs={{ swiper: thumbsSwiper }}
-          modules={[FreeMode, Navigation, Thumbs]}
-          className="mySwiper2"
-      >
-{ImgList.map((item,index)=>(
-      <SwiperSlide key={index}>
-      <Image alt="" height={900} width={900} className={``}  src={item}/>
-      </SwiperSlide>
-))}
-      </Swiper>
-
-      <Swiper
-        onSwiper={setThumbsSwiper}
+spaceBetween={10}
+pagination={{clickable:true}}
+navigation
+        cssMode={true}
+          mousewheel={true}
+        keyboard={true}
+        modules={[Navigation, Pagination, Mousewheel, Keyboard]}
         loop={true}
-        spaceBetween={10}
-        slidesPerView={4}
-        freeMode={true}
-        watchSlidesProgress={true}
-        modules={[FreeMode, Navigation, Thumbs]}
-        className="mySwiper"
-      >
+        className={` ${ResponsvForCarousel}`}
+
+>
 {ImgList.map((item,index)=>(
-      <SwiperSlide key={index}>
-      <Image alt="" height={900} width={900} className={``}  src={item}/>
+      <SwiperSlide key={index} className=' '>
+     <div className={`  flex max-h-[30rem] overflow-hidden justify-center items-center `}>
+           <Image alt="" height={1000} width={1000} className={`max-w-[50rem] relative top-[-2rem] w-full w-screen550:top-[-1rem]`}  src={item} />
+    </div>
+
       </SwiperSlide>
 ))}
       </Swiper>
 
-
-
-
-    </>
-  );
+    </section>
+  )
 }

@@ -24,13 +24,39 @@ name:string
 logo:string
 list:Tcar[]
 }
-export type TallList = {
-  AllList: TListCar[];
-}
-export type TstateCarSelected = {
-  CarSelected: Tcar;
-  setCarSelected: React.Dispatch<React.SetStateAction<Tcar>>;
+// export type TstateCarsFound = {
+//   CarsFound: Tcar[];
+//   setCarsFound: React.Dispatch<React.SetStateAction<Tcar[]>>;
+// };
+
+// export type TallList = {
+//   AllList: TListCar[];
+// }
+// export type TstateCarSelected = {
+//   CarSelected: Tcar;
+//   setCarSelected: React.Dispatch<React.SetStateAction<Tcar>>;
+// };
+// export type TstateInputValue = {
+//   InputValue: string;
+//   setInputValue: React.Dispatch<React.SetStateAction<string>>;
+// };
+
+export type Tstate<T> = {
+CarsFound: T;
+setCarsFound: React.Dispatch<React.SetStateAction<T>>;
+AllList:T
+  CarSelected:T
+setCarSelected:React.Dispatch<React.SetStateAction<T>>;
+  InputValue: T;
+  setInputValue: React.Dispatch<React.SetStateAction<T>>;
 };
+
+export type TstateCarsFound = Tstate<Tcar[]>;
+export type TallList = Tstate<TListCar[]>;
+export type TstateCarSelected = Tstate<Tcar>;
+export type TstateInputValue = Tstate<string>;
+
+
 
 
 // export type TallList = {
