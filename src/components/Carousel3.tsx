@@ -44,7 +44,7 @@ return (  <section className="  flex w-full justify-center">
       <Slider {...settings}  >
 
       {ImgList.map((item,index)=>(
-     <div >
+     <div key={index}>
         <div className={`  flex max-h-[30rem] overflow-hidden justify-center items-center `}>
      <Image alt="" height={1000} width={1000} className={`max-w-[50rem]  w-full`}  src={item} />
         </div>
