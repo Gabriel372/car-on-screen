@@ -15,10 +15,12 @@ export function MyContextProvider({children}:Props) {
   const [CarSelected,setCarSelected] = useState<Tcar>()
   const [CarsFound,setCarsFound] = useState<Tcar[]>([])
   const [InputValue,setInputValue] = useState<string>('')
+  const [ListSelected, setListSelected] = useState<TListCar>(AllList[0])
 
 
 
-return ( <MyContext.Provider value={{AllList,CarSelected,CarsFound,InputValue,setInputValue,setCarSelected,setCarsFound}}>
+return ( <MyContext.Provider value={{AllList,CarSelected,CarsFound,InputValue,ListSelected,
+setListSelected,setInputValue,setCarSelected,setCarsFound}}>
       {children}
     </MyContext.Provider>
   )

@@ -17,10 +17,7 @@ export default function Carousel( ) {
     const ImgList = [CarSelected?.imgFront,CarSelected?.imgBack,CarSelected?.imgPanel]
     const [thumbsSwiper, setThumbsSwiper] = useState<any >({})
 const ResponsvForCarousel = `max-w-[50rem] max-h-[24rem] w-full w-screen800:max-h-[23rem] w-screen750:max-h-[22rem] w-screen700:max-h-[21rem] w-screen650:max-h-[19rem] w-screen600:max-h-[18.5rem] w-screen550:max-h-[15rem] w-screen500:max-h-[14.5rem] w-screen450:max-h-[13rem] w-screen400:max-h-[12rem]  w-screen350:max-h-[10rem] w-screen300:max-h-[8.5rem] `
-//w-screen800:max-h-[18rem] w-screen550:max-h-[15rem] w-screen400:max-h-[12rem]
-//w-screen800:max-h-[40vh] w-screen600:max-h-[35vh] w-screen500:max-h-[30vh]
-//max-h-[24rem] w-full w-screen800:max-h-[18rem] w-screen600:max-h-[16.5rem] w-screen550:max-h-[15rem] w-screen500:max-h-[14rem] w-screen400:max-h-[12rem]
-//max-w-[50rem] max-h-[24rem] w-full w-screen800:max-h-[23rem] w-screen750:max-h-[22rem] w-screen700:max-h-[21rem] w-screen650:max-h-[19rem] w-screen600:max-h-[18.5rem] w-screen550:max-h-[15rem] w-screen500:max-h-[14.5rem] w-screen450:max-h-[13rem] w-screen400:max-h-[11rem]  w-screen350:max-h-[10rem] w-screen300:max-h-[8.5rem] 
+
 return (
     <section className=''>
       <Swiper

@@ -1,11 +1,6 @@
 import { TstateCarSelected } from "@/components/Types";
-import { useContext,useState } from "react";
+import { useContext,useState,useEffect } from "react";
 import { MyContext } from "@/context/MyContext";
-import Image from "next/image";
-import 'swiper/css'; 
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import { Inder } from "next/font/google";
 import { RxCalendar } from "react-icons/rx";
 import { BsFuelPump } from "react-icons/bs";
 import { TfiMoney } from "react-icons/tfi";
@@ -16,13 +11,28 @@ import { FaWhiskeyGlass } from "react-icons/fa6";
 import { IoSnowOutline } from "react-icons/io5";
 import { PiEngineBold } from "react-icons/pi";
 import Carousel from "@/components/Carousel";
+import { useRouter } from 'next/router';
+
 
 function CarShow() {
-    const {CarSelected } = useContext(MyContext) as  TstateCarSelected
-    const ImgList = [CarSelected?.imgFront,CarSelected?.imgBack,CarSelected?.imgPanel]
-    const [ImgSelected,setImgSelected] = useState<string>('')
+    const {CarSelected,setCarSelected } = useContext(MyContext) as  TstateCarSelected
+    const router = useRouter();
+
+useEffect(()=>{
+if (!CarSelected) {
+GetCarSaved()
+}
+},[])
+
+function GetCarSaved() {
+    if (typeof window !== 'undefined') {
+      const CarStoraged = sessionStorage.getItem('SavedCar');
+      setCarSelected(CarStoraged ? JSON.parse(CarStoraged) : '');
+    }
+  }
 
 return (<section className={ ``}>
+
 {CarSelected && <>
 <Carousel/>
 <h3 className={` text-center text-2xl my-6 text-red-800 font-semibold`}>{CarSelected.name}</h3>
@@ -30,7 +40,7 @@ return (<section className={ ``}>
 <div className={` flex flex-col items-center`}>
 <h3 className={` text-[1.5rem] my-3`}>Características</h3>
 
-<ul>
+<ul className={`ml-2 mr-1`}>
 <li className={` text-md text-gray-600 flex items-center mb-3`}>
 <RxCalendar className={` mr-1 text-2xl`}/>Ano: <p className={` text-xl ml-1 font-semibold text-black`}> {CarSelected.year} </p>
 </li>

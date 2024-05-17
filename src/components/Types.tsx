@@ -19,11 +19,47 @@ imgBack:string
 imgPanel:string
 }
 // export type TallList = Tcar[][]
+
 export type TListCar = {
 name:string
 logo:string
 list:Tcar[]
 }
+
+export type Tstate<T> = {
+CarsFound: T;
+setCarsFound: React.Dispatch<React.SetStateAction<T>>;
+AllList:T
+  CarSelected:T
+setCarSelected:React.Dispatch<React.SetStateAction<T>>;
+  InputValue: T;
+  setInputValue: React.Dispatch<React.SetStateAction<T>>;
+   ListSelected:T
+setListSelected:React.Dispatch<React.SetStateAction<T>>; 
+
+};
+
+export type TstateListSelected = Tstate<TListCar>;
+  export type TstateCarSelected = Tstate<Tcar>;
+export type TstateCarsFound = Tstate<Tcar[]>;
+export type TallList = Tstate<TListCar[]>;
+export type TstateInputValue = Tstate<string>;
+
+// export type Tstate<T> = {
+//   State: T;
+//   setState: React.Dispatch<React.SetStateAction<T>>;
+//   };
+
+
+
+
+// export type TstateListSelected = {
+//   ListSelected: TListCar;
+//   setListSelected: React.Dispatch<React.SetStateAction<TListCar>>;
+// };
+
+
+
 // export type TstateCarsFound = {
 //   CarsFound: Tcar[];
 //   setCarsFound: React.Dispatch<React.SetStateAction<Tcar[]>>;
@@ -41,20 +77,9 @@ list:Tcar[]
 //   setInputValue: React.Dispatch<React.SetStateAction<string>>;
 // };
 
-export type Tstate<T> = {
-CarsFound: T;
-setCarsFound: React.Dispatch<React.SetStateAction<T>>;
-AllList:T
-  CarSelected:T
-setCarSelected:React.Dispatch<React.SetStateAction<T>>;
-  InputValue: T;
-  setInputValue: React.Dispatch<React.SetStateAction<T>>;
-};
 
-export type TstateCarsFound = Tstate<Tcar[]>;
-export type TallList = Tstate<TListCar[]>;
-export type TstateCarSelected = Tstate<Tcar>;
-export type TstateInputValue = Tstate<string>;
+
+
 
 
 
@@ -72,10 +97,10 @@ export type TstateInputValue = Tstate<string>;
 //     AllList: Tcar[];
 //     setAllList: React.Dispatch<React.SetStateAction<Tcar[]>>;
 //   };
-  export type TstateListSelected = {
-    ListSelected: Tcar[];
-    setListSelected: React.Dispatch<React.SetStateAction<Tcar[]>>;
-  };
+  // export type TstateListSelected = {
+  //   ListSelected: Tcar[];
+  //   setListSelected: React.Dispatch<React.SetStateAction<Tcar[]>>;
+  // };
 
 
 
