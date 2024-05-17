@@ -1,14 +1,13 @@
 import { IoSearch } from "react-icons/io5";
-import {  createContext,useState,useEffect,useContext } from "react";
+import {  useState,useEffect,useContext } from "react";
 import { MyContext } from "@/context/MyContext";
-import { TallList,Tcar,TstateCarSelected, TstateCarsFound, TstateInputValue } from "./Types";
+import { TstateAllList,TstateCarSelected, TstateCarsFound, TstateInputValue, } from "./Types";
 import { IoMdClose } from "react-icons/io";
 
 function SearchCar() {
     const [MsgAlert,setMsgAlert] = useState<boolean>(false);
-    const { AllList, InputValue,setCarSelected,CarSelected,setCarsFound,CarsFound,setInputValue } = useContext(MyContext) as TallList & TstateCarSelected & TstateCarsFound & TstateInputValue
-    const [CleanValue,setCleanValue] = useState<boolean>(false);
-
+    const { InputValue,setCarSelected,CarSelected,setCarsFound,CarsFound,setInputValue } = useContext(MyContext) as TstateCarSelected & TstateCarsFound & TstateInputValue
+    const { AllList} = useContext(MyContext) as TstateAllList ;
 
 useEffect(()=>{
 if (MsgAlert) {

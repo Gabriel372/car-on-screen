@@ -1,5 +1,5 @@
 import { TstateCarSelected } from "@/components/Types";
-import { useContext,useState,useEffect } from "react";
+import { useContext,useEffect } from "react";
 import { MyContext } from "@/context/MyContext";
 import { RxCalendar } from "react-icons/rx";
 import { BsFuelPump } from "react-icons/bs";
@@ -11,12 +11,12 @@ import { FaWhiskeyGlass } from "react-icons/fa6";
 import { IoSnowOutline } from "react-icons/io5";
 import { PiEngineBold } from "react-icons/pi";
 import Carousel from "@/components/Carousel";
-import { useRouter } from 'next/router';
-
+import { motion } from 'framer-motion';
+import { pageVariants,pageTransition } from "../components/AnimationMotion";
+import ButtonLike from "@/components/ButtonLike";
 
 function CarShow() {
     const {CarSelected,setCarSelected } = useContext(MyContext) as  TstateCarSelected
-    const router = useRouter();
 
 useEffect(()=>{
 if (!CarSelected) {
@@ -31,14 +31,17 @@ function GetCarSaved() {
     }
   }
 
-return (<section className={ ``}>
+return (<motion.section className={ ``}   
+initial="initial" animate="in" exit="out"  variants={pageVariants} transition={pageTransition}>
 
 {CarSelected && <>
 <Carousel/>
-<h3 className={` text-center text-2xl my-6 text-red-800 font-semibold`}>{CarSelected.name}</h3>
+<h3 className={` text-center text-2xl my-4 text-red-800 font-semibold flex max-w-[25rem] m-auto justify-between px-2`}>
+{CarSelected.name}
+<ButtonLike item={CarSelected}/></h3>
 
 <div className={` flex flex-col items-center`}>
-<h3 className={` text-[1.5rem] my-3`}>Características</h3>
+<h3 className={` text-[1.5rem] mb-3`}>Características</h3>
 
 <ul className={`ml-2 mr-1`}>
 <li className={` text-md text-gray-600 flex items-center mb-3`}>
@@ -85,7 +88,7 @@ return (<section className={ ``}>
 </div>
 
 </>}
-</section>)
+</motion.section>)
 
 }
 

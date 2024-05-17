@@ -1,6 +1,6 @@
 import Link from "next/link";
 import SearchCar from "@/components/SearchCar";
-import { useContext,useState,useEffect} from "react";
+import { useContext,useEffect} from "react";
 import { useRouter } from 'next/router';
 import { MyContext } from "@/context/MyContext";
 import { TstateInputValue } from "@/components/Types";

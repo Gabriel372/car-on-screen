@@ -1,13 +1,17 @@
 import { useContext, useState,useEffect } from "react"
 import { MyContext } from "@/context/MyContext";
-import { TListCar, TallList, Tcar, TstateCarSelected, TstateCarsFound, TstateInputValue, TstateListSelected } from "./Types";
+import { TListCar, Tcar, TstateCarSelected, TstateCarsFound, TstateInputValue, TstateListSelected,TstateAllList } from "./Types";
 import Image from "next/image";
 import ShowFoundCar from "./ShowFoundCar";
 import CardsCar from "./CardsCar";
+import { motion } from 'framer-motion';
+import { pageVariants,pageTransition } from "../components/AnimationMotion";
+
 
 function SelectList() {
-    const { AllList, setCarSelected,CarSelected,CarsFound,InputValue,setListSelected,setInputValue } = useContext(MyContext) as TallList & TstateCarSelected & TstateCarsFound & TstateInputValue & TstateListSelected
-const [NameClicked, setNameClicked] = useState<string>('Volkswagen')
+    const {  setCarSelected,CarSelected,CarsFound,InputValue,setListSelected,setInputValue } = useContext(MyContext) as TstateCarSelected & TstateCarsFound & TstateInputValue & TstateListSelected
+    const { AllList } = useContext(MyContext) as TstateAllList;
+    const [NameClicked, setNameClicked] = useState<string>('Volkswagen')
 
 useEffect(()=>{
 if (InputValue !== '' && NameClicked !== '') {
@@ -24,7 +28,8 @@ if (InputValue !== '') {
 setInputValue('')
 }
 }
-return (<section className={` overflow-hidden px-1 pb-2 min-h-[95vh]`}>
+return (<motion.section className={` overflow-hidden px-1 pb-2 min-h-[95vh]`}
+initial="initial" animate="in" exit="out" variants={pageVariants} transition={pageTransition} >
 <div className={` max-w-6xl m-auto`}>
  <h3 className={` text-center font-semibold text-2xl my-3 w-screen500:text-[1.1rem]`}>Selecione a marca para visualizar os carros</h3>
  
@@ -51,7 +56,7 @@ return (<section className={` overflow-hidden px-1 pb-2 min-h-[95vh]`}>
 
  </div>
 
-</section>)
+</motion.section>)
 }
 
 export default SelectList ;
