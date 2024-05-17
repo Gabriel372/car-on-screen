@@ -50,6 +50,11 @@ export type TstateCarsFound = Tstate<Tcar[]>;
 // export type TstateAllList = Tstate<TListCar[]>;
 // export type TallList = Tstate<TListCar[]>;
 export type TstateInputValue = Tstate<string>;
+export type TlikeCar = {
+  item: Tcar;
+}
+
+
 
 // export type Tstate<T> = {
 //   State: T;
