@@ -6,7 +6,7 @@ import { IoMdClose } from "react-icons/io";
 
 function SearchCar() {
     const [MsgAlert,setMsgAlert] = useState<boolean>(false);
-    const { InputValue,setCarSelected,CarSelected,setCarsFound,CarsFound,setInputValue } = useContext(MyContext) as TstateCarSelected & TstateCarsFound & TstateInputValue
+    const { InputValue,setCarsFound,CarsFound,setInputValue } = useContext(MyContext) as TstateCarSelected & TstateCarsFound & TstateInputValue
     const { AllList} = useContext(MyContext) as TstateAllList ;
 
 useEffect(()=>{
@@ -63,15 +63,10 @@ return (<label className="search__label">
     <IoSearch className="search__icon "/>
     </button>
 }
-
-
-
-
 {MsgAlert && <p className="search_alert">*Preencha o campo</p>}    
 </form>
 </label>
-
 )    
 }
 
-export default SearchCar
+export default SearchCar ;

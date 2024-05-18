@@ -100,7 +100,6 @@ isLiked:false,
  imgBack:'https://quatrorodas.abril.com.br/wp-content/uploads/2024/04/Nova-S10_2-1.jpg?crop=1&resize=1212,909',
  imgPanel:'https://quatrorodas.abril.com.br/wp-content/uploads/2024/04/Nova-S10_3-1.jpg?crop=1&resize=1212,909',
 }
-
 ]}
 
 

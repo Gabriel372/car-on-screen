@@ -1,6 +1,5 @@
 import { TListCar } from "@/components/Types";
 
-//PREENCHER
 export const RenaultList:TListCar= {
 name:'Renault',
 logo:'https://cdn.icon-icons.com/icons2/3914/PNG/512/renault_logo_icon_248665.png',
@@ -103,9 +102,5 @@ imgPanel:'https://cdn.group.renault.com/ren/br/renault-new-cars/product-plans/20
     imgBack:'https://production.autoforce.com/uploads/picture/image/175444524/main_webp_comprar-nova-oroch-2023-ef47fb87-52f7-4e15-a0a6-830c3be86d9c_74c9b73215.jpg.webp',
     imgPanel:'https://production.autoforce.com/uploads/picture/image/175444526/main_webp_comprar-nova-oroch-2023-ef47fb87-52f7-4e15-a0a6-830c3be86d9c_434086e493.jpg.webp',
 },
-
-
-
-
 ]
 }

@@ -1,15 +1,14 @@
 import { useContext, useState,useEffect } from "react"
 import { MyContext } from "@/context/MyContext";
-import { TListCar, Tcar, TstateCarSelected, TstateCarsFound, TstateInputValue, TstateListSelected,TstateAllList } from "./Types";
+import { TListCar,TstateCarSelected, TstateCarsFound, TstateInputValue, TstateListSelected,TstateAllList } from "./Types";
 import Image from "next/image";
 import ShowFoundCar from "./ShowFoundCar";
 import CardsCar from "./CardsCar";
 import { motion } from 'framer-motion';
 import { pageVariants,pageTransition } from "../components/AnimationMotion";
 
-
 function SelectList() {
-    const {  setCarSelected,CarSelected,CarsFound,InputValue,setListSelected,setInputValue } = useContext(MyContext) as TstateCarSelected & TstateCarsFound & TstateInputValue & TstateListSelected
+    const { InputValue,setListSelected,setInputValue } = useContext(MyContext) as TstateCarSelected & TstateCarsFound & TstateInputValue & TstateListSelected
     const { AllList } = useContext(MyContext) as TstateAllList;
     const [NameClicked, setNameClicked] = useState<string>('Volkswagen')
 
@@ -18,8 +17,6 @@ if (InputValue !== '' && NameClicked !== '') {
 setNameClicked('')  
 }
 },[InputValue,NameClicked])
-
-
 
 function ClickSelect(index:number,item:TListCar)   {
     setListSelected(AllList[index]);
@@ -53,7 +50,6 @@ initial="initial" animate="in" exit="out" variants={pageVariants} transition={pa
 : 
   <CardsCar/>
 }
-
  </div>
 
 </motion.section>)

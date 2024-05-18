@@ -1,4 +1,3 @@
-import React, {  useState } from 'react';
 import {  Swiper,SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -27,9 +26,8 @@ navigation
         keyboard={true}
         modules={[Navigation, Pagination, Mousewheel, Keyboard]}
         loop={true}
-        className={` ${ResponsvForCarousel}`}
-
->
+        className={` ${ResponsvForCarousel}`} >
+          
 {ImgList.map((item,index)=>(
       <SwiperSlide key={index} className=' '>
      <div className={`  flex max-h-[30rem] overflow-hidden justify-center items-center `}>

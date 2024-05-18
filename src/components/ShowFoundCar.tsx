@@ -61,4 +61,4 @@ className={`transition-all duration-300 transform hover:scale-110`} />
 )
 }
 
-export default ShowFoundCar
+export default ShowFoundCar ;

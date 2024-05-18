@@ -60,7 +60,7 @@ initial="initial" animate="in" exit="out"  variants={pageVariants} transition={p
 <p className={` text-xl ml-1 font-semibold text-black`}> {CarSelected.power} </p>
 </li>
 
-<li className={` text-md text-gray-600 flex items-center mb-3`}><BsFuelPump className={` mr-1 text-2xl `}/>Combustivel: 
+<li className={` text-md text-gray-600 flex items-center mb-3 flex-wrap`}><BsFuelPump className={` mr-1 text-2xl `}/>Combustivel: 
 <p className={` text-xl ml-1 font-semibold text-black`}> {CarSelected.fuel} </p>
 </li>
 
@@ -68,7 +68,7 @@ initial="initial" animate="in" exit="out"  variants={pageVariants} transition={p
 <p className={` text-xl ml-1 font-semibold text-black`}> {CarSelected.doors} </p>
 </li>
 
-<li className={` text-md text-gray-600 flex  w-screen350:flex-col items-center w-screen350:items-start mb-3`}>
+<li className={` text-md text-gray-600 flex  w-screen400:flex-col items-center w-screen400:items-start mb-3`}>
 <p className={` flex flex-row`}><TbManualGearbox  className={` mr-1 text-2xl `}/>Cãmbio:</p>    
 <p className={` text-xl ml-1 font-semibold text-black w-screen350:text-[1rem]`}> {CarSelected.transmission} </p>
 </li>
@@ -78,7 +78,7 @@ initial="initial" animate="in" exit="out"  variants={pageVariants} transition={p
 </li>
 
 {CarSelected.hasEletricWindow !== '' || 'não' ?
-(<li className={` text-md text-gray-600 flex items-center mb-3 w-screen450:flex-col w-full w-screen450:items-start`}>
+(<li className={` text-md text-gray-600 flex items-center mb-3 w-screen450:flex-wrap w-full w-screen450:items-start`}>
 <span className={` flex flex-row`}>
   <FaWhiskeyGlass className={` mr-1 text-2xl `}/>Possui Vidros eletricos? 
   </span>  
