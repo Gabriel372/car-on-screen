@@ -43,7 +43,7 @@ initial="initial" animate="in" exit="out"  variants={pageVariants} transition={p
 <div className={` flex flex-col items-center`}>
 <h3 className={` text-[1.5rem] mb-3 text-center`}>Características</h3>
 
-<ul className={`ml-2 mr-1 flex flex-col w-screen450:w-full w-screen450:ml-3`}>
+<ul className={`pl-2 mr-1 flex flex-col w-screen450:w-full`}>
 <li className={` text-md text-gray-600 flex items-center mb-3 `}>
 <RxCalendar className={` mr-1 text-2xl`}/>Ano: <p className={` text-xl ml-1 font-semibold text-black`}> {CarSelected.year} </p>
 </li>
