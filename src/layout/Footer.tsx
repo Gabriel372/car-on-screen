@@ -1,19 +1,27 @@
 import Link from "next/link";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import { IoLogoWhatsapp } from "react-icons/io";
 
 function Footer() {
 
 return (<footer className='bg-red-700 text-white w-full flex justify-center'>
 
-<nav className=" flex h-[4rem] items-center flex-wrap px-1">
+<nav className=" flex min-h-[4rem] items-center flex-wrap p-1">
 <p>Developed by: Gabriel Brandão</p>
-<Link href='https://www.linkedin.com/in/gabriel-brand%C3%A3o-42174223a' className={` text-2xl ml-1 text-slate-100 hover:text-white`}>
+<Link href='https://www.linkedin.com/in/gabriel-brand%C3%A3o-42174223a' 
+className={` text-[1.8rem] ml-2 text-slate-100 hover:text-white w-screen350:text-[1.5rem]`}>
 <FaLinkedin />
 </Link>
 
-<Link href='https://github.com/Gabriel372' className={`text-2xl ml-1 text-slate-100 hover:text-white`}>
+<Link href='https://github.com/Gabriel372' 
+className={`text-[1.8rem] ml-2 text-slate-100 hover:text-white w-screen350:text-[1.5rem]`}>
 <FaGithub />
+</Link>
+
+<Link className={` text-[1.8rem] ml-2 text-slate-100 hover:text-white w-screen350:text-[1.5rem]`}
+ href='https://whatsa.me/5521973766911/?t=Olá, vim através site criado por você'>
+<IoLogoWhatsapp />
 </Link>
 
 </nav>
