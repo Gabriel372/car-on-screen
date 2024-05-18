@@ -41,7 +41,7 @@ className={`transition-all duration-300 transform hover:scale-110`} />
    <b className={`text-black`}> {item.price}<span className={` font-light`}> </span>
  </b>
  </p>
- <Link className={`  text-red-800 rounded-md p-1 flex w-[7rem] items-center hover:bg-red-700 mt-2 border border-red-800 hover:text-white transition flex-row`}
+ <Link className={`  text-red-800 rounded-md p-1 flex w-[7.5rem] h-[2.1rem]  items-center hover:bg-red-700 mt-2 border border-red-800 hover:text-white transition flex-row`}
   onClick={() => SaveCarSelected(item)} href={`/CarShow`} >Saiba mais<IoIosArrowForward className={` ml-1 text-xl`}/></Link>
          
  </div>

@@ -48,8 +48,12 @@ initial="initial" animate="in" exit="out"  variants={pageVariants} transition={p
 <RxCalendar className={` mr-1 text-2xl`}/>Ano: <p className={` text-xl ml-1 font-semibold text-black`}> {CarSelected.year} </p>
 </li>
 
-<li className={` text-md text-gray-600 flex items-center mb-3`}>
-<TfiMoney className={` mr-1 text-2xl`}/>Preço da tabela fipe: <p className={` text-xl ml-1 font-semibold text-black`}> {CarSelected.price} </p>
+<li className={` text-md text-gray-600 flex items-center mb-3 w-screen300:flex-col w-screen300:items-start`}>
+<span className={` flex flex-row`}>
+<TfiMoney className={` mr-1 text-2xl`}/>Preço da tabela fipe: 
+</span>
+<p className={` text-xl ml-1 font-semibold text-black`}> {CarSelected.price} </p>
+
 </li>
 
 <li className={` text-md text-gray-600 flex items-center mb-3`}><PiEngineBold className={` mr-1 text-2xl`}/>Motor: 
@@ -74,14 +78,18 @@ initial="initial" animate="in" exit="out"  variants={pageVariants} transition={p
 </li>
 
 {CarSelected.hasEletricWindow !== '' || 'não' ?
-(<li className={` text-md text-gray-600 flex items-center mb-3`}><FaWhiskeyGlass className={` mr-1 text-2xl `}/>Possui Vidros eletricos? 
+(<li className={` text-md text-gray-600 flex items-center mb-3 w-screen450:flex-col w-full w-screen450:items-start`}>
+<span className={` flex flex-row`}>
+  <FaWhiskeyGlass className={` mr-1 text-2xl `}/>Possui Vidros eletricos? 
+  </span>  
+
 <p className={` text-xl ml-1 font-semibold text-black`}> {CarSelected.hasEletricWindow} </p>
 </li>):'' }
 
 {CarSelected.hasAirConditioned !== '' || 'não' ?
 (<li className={` text-md text-gray-600 flex items-center mb-3`}><IoSnowOutline className={` mr-1 text-2xl `}/>Possui Ar condicionado ? 
 <p className={` text-xl ml-1 font-semibold text-black`}> {CarSelected.hasAirConditioned} </p>
-</li>):'' }-
+</li>):'' }
 
 </ul>
 
