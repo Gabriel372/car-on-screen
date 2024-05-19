@@ -4,7 +4,7 @@
 https://gabriel372.github.io/car-on-screen/
 
 ## Sobre
-Sobre o Projeto: é um catálogo interativo de veículos. Neste catálogo, os usuários podem selecionar uma marca específica ou pesquisar por modelo para visualizar os detalhes do veículo. Além disso, o site possui um botão de curtir e um carrossel de imagens para uma experiência de usuário aprimorada.
+É um catálogo interativo de veículos. Neste catálogo, os usuários podem selecionar uma marca específica ou pesquisar por modelo para visualizar os detalhes do veículo. Além disso, o site possui um botão de curtir e um carrossel de imagens para uma experiência de usuário aprimorada.
 
 ## Tecnologias utilizadas
 
