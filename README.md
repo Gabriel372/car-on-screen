@@ -20,6 +20,8 @@ Adiciona efeitos animados durante a troca de páginas
 ### GitHub Pages
 Hospeda o site, garantindo sua disponibilidade na web
 
+video parte 1
+https://github.com/Gabriel372/car-on-screen/assets/124525153/3d1de7c6-0876-4851-a2ad-62db27fd5a15
 
-
-
+video parte 2
+https://github.com/Gabriel372/car-on-screen/assets/124525153/221d6c32-eb31-4406-bc1e-3640e134a867
